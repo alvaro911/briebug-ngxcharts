@@ -1,0 +1,22 @@
+main{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.sidebar{
+  width: 30%;
+  padding: 15px;
+  color: white;
+  background-color: #012430;
+  min-height: 100vh;
+}
+
+.chart-col{
+  width: 70%;
+}
+
+.chart-col div{
+  margin: 40px auto;
+}
