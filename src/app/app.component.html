@@ -3,14 +3,13 @@
     <div>
       <ngx-charts-bar-vertical
         *ngIf="chartType === 'bar-vertical'"
-        class="chart-container"
+
         [view]="view"
         [scheme]="colorScheme"
         [schemeType]="schemeType"
         [customColors]="customColors"
         [results]="single"
         [animations]="animations"
-        [gradient]="gradient"
         [xAxis]="showXAxis"
         [yAxis]="showYAxis"
         [legend]="showLegend"
@@ -36,7 +35,6 @@
         [schemeType]="schemeType"
         [results]="single"
         [animations]="animations"
-        [gradient]="gradient"
         [xAxis]="showXAxis"
         [yAxis]="showYAxis"
         [legend]="showLegend"
@@ -68,7 +66,6 @@
         [doughnut]="doughnut"
         [arcWidth]="arcWidth"
         (legendLabelClick)="onLegendLabelClick($event)"
-        [gradient]="gradient"
         [tooltipDisabled]="tooltipDisabled"
         [tooltipText]="pieTooltipText"
         (select)="select($event)">
@@ -81,7 +78,6 @@
         [results]="single"
         [animations]="animations"
         (legendLabelClick)="onLegendLabelClick($event)"
-        [gradient]="gradient"
         [tooltipDisabled]="tooltipDisabled"
         [tooltipText]="pieTooltipText"
         (select)="select($event)">
@@ -98,34 +94,6 @@
         [tooltipText]="pieTooltipText"
         (select)="select($event)">
       </ngx-charts-pie-grid>
-      <combo-chart-component
-        *ngIf="chartType === 'combo-chart'"
-        class="chart-container"
-        [view]="view"
-        [scheme]="comboBarScheme"
-        [colorSchemeLine]="lineChartScheme"
-        [results]="barChart"
-        [animations]="animations"
-        [lineChart]="lineChartSeries"
-        [tooltipDisabled]="tooltipDisabled"
-        [yAxisTickFormatting]="yLeftTickFormat"
-        [yLeftAxisScaleFactor]="yLeftAxisScale"
-        [yRightAxisScaleFactor]="yRightAxisScale"
-        [yRightAxisTickFormatting]="yRightTickFormat"
-        [gradient]="gradient"
-        [xAxis]="showXAxis"
-        [yAxis]="showYAxis"
-        [legend]="showLegend"
-        [legendTitle]="legendTitle"
-        [showGridLines]="showGridLines"
-        [showXAxisLabel]="showXAxisLabel"
-        [showYAxisLabel]="showYAxisLabel"
-        [showRightYAxisLabel]="showYAxisLabel"
-        [xAxisLabel]="xAxisLabel"
-        [yAxisLabel]="yAxisLabel"
-        [yAxisLabelRight]="yAxisLabelRight"
-        (select)="onSelect($event)">
-      </combo-chart-component>
     </div>
   </div>
   <div class="sidebar">
@@ -249,12 +217,6 @@
         <label>
           <input type="checkbox" [checked]="roundDomains" (change)="roundDomains = $event.target.checked">
           Round Domains
-        </label> <br />
-      </div>
-      <div *ngIf="chart.options.includes('gradient')">
-        <label>
-          <input type="checkbox" [checked]="gradient" (change)="gradient = $event.target.checked">
-          Use Gradients
         </label> <br />
       </div>
       <div *ngIf="chart.options.includes('showLegend')">

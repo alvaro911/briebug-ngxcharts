@@ -26,30 +26,6 @@ const chartGroups = [
           xAxisLabel: 'GDP Per Capita',
         }
       },
-      {
-        name: 'Grouped Vertical Bar Chart',
-        selector: 'bar-vertical-2d',
-        inputFormat: 'multiSeries',
-        options: [
-          'animations', 'colorScheme', 'schemeType', 'showXAxis', 'showYAxis', 'gradient', 'barPadding', 'groupPadding',
-          'showLegend', 'legendTitle', 'showXAxisLabel', 'xAxisLabel', 'showYAxisLabel', 'yAxisLabel',
-          'showGridLines', 'roundDomains', 'tooltipDisabled', 'roundEdges', 'yScaleMax'
-        ]
-      },
-      {
-        name: 'Grouped Horizontal Bar Chart',
-        selector: 'bar-horizontal-2d',
-        inputFormat: 'multiSeries',
-        options: [
-          'animations', 'colorScheme', 'schemeType', 'showXAxis', 'showYAxis', 'gradient', 'barPadding', 'groupPadding',
-          'showLegend', 'legendTitle', 'showXAxisLabel', 'xAxisLabel', 'showYAxisLabel', 'yAxisLabel',
-          'showGridLines', 'roundDomains', 'tooltipDisabled', 'roundEdges', 'xScaleMax'
-        ],
-        defaults: {
-          yAxisLabel: 'Country',
-          xAxisLabel: 'GDP Per Capita',
-        }
-      },
     ]
   },
   {
