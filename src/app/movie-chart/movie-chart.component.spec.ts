@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ComboChartComponent } from './combo-chart.component';
+import { MovieChartComponent } from './movie-chart.component';
 
-describe('ComboChartComponent', () => {
-  let component: ComboChartComponent;
-  let fixture: ComponentFixture<ComboChartComponent>;
+describe('MovieChartComponent', () => {
+  let component: MovieChartComponent;
+  let fixture: ComponentFixture<MovieChartComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ComboChartComponent ]
+      declarations: [ MovieChartComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ComboChartComponent);
+    fixture = TestBed.createComponent(MovieChartComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

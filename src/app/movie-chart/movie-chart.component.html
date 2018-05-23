@@ -1,0 +1,25 @@
+<div class="movie-search">
+  <h1>Look for a movie based on TMDB's <a href="https://developers.themoviedb.org/3/getting-started/popularity" target="_blank">Popularity</a> rating</h1>
+  <div class="search">
+    <input type="text" [(ngModel)]="movie"><button (click)="searchMovie(movie)">Go</button>
+  </div>
+</div>
+
+<div class="chart-wrapper">
+  <div class="chart-placeholder">
+    <img src="https://78.media.tumblr.com/c8cd70a5a02a345d47dc2d979e31258b/tumblr_oymhvxBE4a1v1fssvo1_500.gif" *ngIf="movies.length < 1 ">
+  </div>
+  <ngx-charts-bar-vertical
+    *ngIf="movies.length > 0"
+    [view]=view
+    [results]="movies"
+    [xAxis]="showXAxis"
+    [yAxis]="showYAxis"
+    [legend]="showLegend"
+    [xAxisLabel]="xAxisLabel"
+    [yAxisLabel]="yAxisLabel"
+    [showXAxisLabel]="showXAxis"
+    [showYAxisLabel]="showYAxis"
+  >
+  </ngx-charts-bar-vertical>
+</div>
